@@ -1,5 +1,6 @@
 package com.fusionhs.modulithdojo.employee.model;
 
+import com.fusionhs.modulithdojo.common.enums.TaskStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -42,6 +43,10 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Department department;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "task_status", nullable = false)
+    private TaskStatus taskStatus;
 
     public enum Department {
         IT, HR, FINANCE, MARKETING, OPERATIONS, SALES

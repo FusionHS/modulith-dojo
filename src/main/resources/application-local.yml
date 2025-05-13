@@ -1,13 +1,26 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
     show-sql: true
+    defer-datasource-initialization: true
     properties:
       hibernate:
         format_sql: true
-  flyway:
-    locations: classpath:db/migration,classpath:db/testdata
+  datasource:
+    url: jdbc:postgresql://localhost:5432/modulith_dojo
+    username: postgres
+    password: postgres
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  sql:
+    init:
+      mode: always
+      platform: postgresql
+      data-locations: classpath:db/testdata/data.sql
 
 logging:
   level:
@@ -18,6 +31,5 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
-      flywaydb: TRACE
     com:
       fusionhs: DEBUG 

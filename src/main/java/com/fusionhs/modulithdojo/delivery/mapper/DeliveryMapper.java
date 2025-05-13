@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.delivery.mapper;
 
-import com.fusionhs.modulithdojo.delivery.dto.DeliveryDto;
+import com.fusionhs.modulithdojo.common.dto.DeliveryDto;
 import com.fusionhs.modulithdojo.delivery.model.Delivery;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

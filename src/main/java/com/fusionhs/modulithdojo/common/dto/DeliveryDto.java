@@ -1,4 +1,4 @@
-package com.fusionhs.modulithdojo.delivery.dto;
+package com.fusionhs.modulithdojo.common.dto;
 
 import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
 import lombok.Data;

@@ -1,9 +1,8 @@
 package com.fusionhs.modulithdojo.delivery.api;
 
+import com.fusionhs.modulithdojo.common.dto.DeliveryDto;
 import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
 import com.fusionhs.modulithdojo.delivery.DeliveryApi;
-import com.fusionhs.modulithdojo.delivery.dto.DeliveryDto;
-import com.fusionhs.modulithdojo.delivery.model.Delivery;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -57,11 +56,12 @@ public class DeliveryController {
         return deliveryService.updateDelivery(id, delivery);
     }
 
-    @PatchMapping("/{id}/status")
-    public DeliveryDto updateDeliveryStatus(
+    @PutMapping("/{id}/status")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void updateOrderStatus(
             @PathVariable Long id,
             @RequestParam DeliveryStatus status) {
-        return deliveryService.updateDeliveryStatus(id, status);
+        deliveryService.updateDeliveryStatusCommand(id, status);
     }
 
     @DeleteMapping("/{id}")

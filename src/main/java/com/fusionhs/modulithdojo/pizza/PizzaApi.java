@@ -13,4 +13,5 @@ public interface PizzaApi {
     PizzaDto createPizza(PizzaDto pizza);
     PizzaDto updatePizza(Long id, PizzaDto pizza);
     void deletePizza(Long id);
+    void incrementPizzaOrderStats(Long pizzaId, int quantity);
 } 

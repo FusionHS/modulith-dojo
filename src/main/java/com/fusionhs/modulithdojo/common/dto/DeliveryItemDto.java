@@ -1,4 +1,4 @@
-package com.fusionhs.modulithdojo.delivery.dto;
+package com.fusionhs.modulithdojo.common.dto;
 
 import lombok.Data;
 
