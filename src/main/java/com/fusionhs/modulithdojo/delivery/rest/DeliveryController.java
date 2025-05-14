@@ -1,7 +1,7 @@
-package com.fusionhs.modulithdojo.delivery.api;
+package com.fusionhs.modulithdojo.delivery.rest;
 
-import com.fusionhs.modulithdojo.common.dto.DeliveryDto;
-import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryDto;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryStatus;
 import com.fusionhs.modulithdojo.delivery.DeliveryApi;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

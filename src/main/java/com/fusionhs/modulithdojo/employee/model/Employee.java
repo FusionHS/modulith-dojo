@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.employee.model;
 
-import com.fusionhs.modulithdojo.common.enums.TaskStatus;
+import com.fusionhs.modulithdojo.common.dto.employee.TaskStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

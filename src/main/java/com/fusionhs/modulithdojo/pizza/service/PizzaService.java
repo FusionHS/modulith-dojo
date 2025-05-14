@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.pizza.service;
 
-import com.fusionhs.modulithdojo.common.dto.PizzaDto;
+import com.fusionhs.modulithdojo.common.dto.pizza.PizzaDto;
 import com.fusionhs.modulithdojo.pizza.PizzaApi;
 import com.fusionhs.modulithdojo.pizza.mapper.PizzaMapper;
 import com.fusionhs.modulithdojo.pizza.model.Pizza;

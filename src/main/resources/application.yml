@@ -20,6 +20,9 @@ spring:
           max-attempts: 3
           max-interval: 10s
           multiplier: 2
+  modulith:
+    events:
+      republish-outstanding-events-on-restart: true
 
 server:
   port: 8080

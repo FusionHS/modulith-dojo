@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.delivery.service;
 
-import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryStatus;
 
 
 public interface DeliveryInternalApi {

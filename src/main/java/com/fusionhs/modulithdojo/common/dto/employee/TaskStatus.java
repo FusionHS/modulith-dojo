@@ -1,4 +1,4 @@
-package com.fusionhs.modulithdojo.common.enums;
+package com.fusionhs.modulithdojo.common.dto.employee;
 
 public enum TaskStatus {
     COOKING,

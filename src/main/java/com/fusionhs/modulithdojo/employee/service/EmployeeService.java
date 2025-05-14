@@ -1,7 +1,7 @@
 package com.fusionhs.modulithdojo.employee.service;
 
-import com.fusionhs.modulithdojo.common.dto.EmployeeDto;
-import com.fusionhs.modulithdojo.common.enums.TaskStatus;
+import com.fusionhs.modulithdojo.common.dto.employee.EmployeeDto;
+import com.fusionhs.modulithdojo.common.dto.employee.TaskStatus;
 import com.fusionhs.modulithdojo.employee.EmployeeApi;
 import com.fusionhs.modulithdojo.employee.EmployeeTaskChangedEvent;
 import com.fusionhs.modulithdojo.employee.mapper.EmployeeMapper;

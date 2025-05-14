@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.employee;
 
-import com.fusionhs.modulithdojo.common.dto.EmployeeDto;
+import com.fusionhs.modulithdojo.common.dto.employee.EmployeeDto;
 import com.fusionhs.modulithdojo.employee.model.Employee;
 
 import java.util.List;

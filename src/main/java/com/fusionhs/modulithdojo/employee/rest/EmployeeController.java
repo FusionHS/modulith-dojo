@@ -1,6 +1,6 @@
-package com.fusionhs.modulithdojo.employee.api;
+package com.fusionhs.modulithdojo.employee.rest;
 
-import com.fusionhs.modulithdojo.common.dto.EmployeeDto;
+import com.fusionhs.modulithdojo.common.dto.employee.EmployeeDto;
 import com.fusionhs.modulithdojo.employee.EmployeeApi;
 import com.fusionhs.modulithdojo.employee.model.Employee;
 import jakarta.validation.Valid;

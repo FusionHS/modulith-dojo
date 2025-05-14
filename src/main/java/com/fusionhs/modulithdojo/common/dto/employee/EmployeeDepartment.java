@@ -1,4 +1,4 @@
-package com.fusionhs.modulithdojo.common.enums;
+package com.fusionhs.modulithdojo.common.dto.employee;
 
 public enum EmployeeDepartment {
     IT, HR, FINANCE, MARKETING, OPERATIONS, SALES

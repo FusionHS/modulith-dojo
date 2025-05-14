@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.employee.service;
 
-import com.fusionhs.modulithdojo.common.enums.TaskStatus;
+import com.fusionhs.modulithdojo.common.dto.employee.TaskStatus;
 
 
 public interface EmployeeInternalApi {

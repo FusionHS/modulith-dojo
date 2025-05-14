@@ -1,7 +1,7 @@
 package com.fusionhs.modulithdojo.delivery;
 
-import com.fusionhs.modulithdojo.common.dto.DeliveryDto;
-import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryDto;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryStatus;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.employee.event;
 
-import com.fusionhs.modulithdojo.common.enums.TaskStatus;
+import com.fusionhs.modulithdojo.common.dto.employee.TaskStatus;
 import com.fusionhs.modulithdojo.delivery.OrderStatusChangedEvent;
 import com.fusionhs.modulithdojo.employee.service.EmployeeInternalApi;
 import lombok.RequiredArgsConstructor;
@@ -16,8 +16,12 @@ public class EmployeeEventHandler {
 
     @ApplicationModuleListener
     public void on(OrderStatusChangedEvent event) {
-        updateEmployeeStatus(event.getChefId(), event);
-        updateEmployeeStatus(event.getDeliveryPersonId(), event);
+        if (event.getChefId() != null) {
+            updateEmployeeStatus(event.getChefId(), event);
+        }
+        if (event.getDeliveryPersonId() != null) {
+            updateEmployeeStatus(event.getDeliveryPersonId(), event);
+        }
     }
 
     private void updateEmployeeStatus(Long employeeId, OrderStatusChangedEvent event) {

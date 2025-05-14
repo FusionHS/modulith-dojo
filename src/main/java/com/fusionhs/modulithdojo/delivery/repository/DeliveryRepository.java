@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.delivery.repository;
 
-import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryStatus;
 import com.fusionhs.modulithdojo.delivery.model.Delivery;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

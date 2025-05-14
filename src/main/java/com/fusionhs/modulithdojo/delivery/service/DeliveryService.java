@@ -1,9 +1,10 @@
 package com.fusionhs.modulithdojo.delivery.service;
 
-import com.fusionhs.modulithdojo.common.dto.DeliveryDto;
-import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryDto;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryStatus;
 import com.fusionhs.modulithdojo.delivery.DeliveryApi;
 import com.fusionhs.modulithdojo.delivery.OrderStatusChangedEvent;
+import com.fusionhs.modulithdojo.delivery.mapper.DeliveryItemMapper;
 import com.fusionhs.modulithdojo.delivery.mapper.DeliveryMapper;
 import com.fusionhs.modulithdojo.delivery.model.Delivery;
 import com.fusionhs.modulithdojo.delivery.repository.DeliveryRepository;
@@ -25,6 +26,7 @@ import java.util.List;
 public class DeliveryService implements DeliveryApi, DeliveryInternalApi {
     private final DeliveryRepository deliveryRepository;
     private final DeliveryMapper deliveryMapper;
+    private final DeliveryItemMapper deliveryItemMapper;
     private final ApplicationEventPublisher eventPublisher;
     private final PizzaApi pizzaApi;
 
@@ -57,14 +59,14 @@ public class DeliveryService implements DeliveryApi, DeliveryInternalApi {
     @Override
     @Transactional
     public DeliveryDto createDelivery(DeliveryDto deliveryDto) {
-        Delivery delivery = deliveryMapper.toEntity(deliveryDto);
+        Delivery delivery = deliveryMapper.toEntity(deliveryDto, deliveryItemMapper);
         delivery.setOrderTime(LocalDateTime.now());
         delivery.setStatus(DeliveryStatus.ORDERED);
         delivery = deliveryRepository.save(delivery);
 
-        if (deliveryDto.getItems() != null) {
-            deliveryDto.getItems().forEach(item -> {
-                pizzaApi.incrementPizzaOrderStats(item.getPizzaId(), item.getQuantity());
+        if (deliveryDto.items() != null) {
+            deliveryDto.items().forEach(item -> {
+                pizzaApi.incrementPizzaOrderStats(item.pizzaId(), item.quantity());
             });
         }
 
@@ -84,7 +86,7 @@ public class DeliveryService implements DeliveryApi, DeliveryInternalApi {
                 .orElseThrow(() -> new EntityNotFoundException("Delivery not found with id: " + id));
 
         DeliveryStatus oldStatus = delivery.getStatus();
-        deliveryMapper.updateEntity(deliveryDto, delivery);
+        delivery = deliveryMapper.updateEntity(delivery, deliveryDto, deliveryItemMapper);
         delivery = deliveryRepository.save(delivery);
 
         if (oldStatus != delivery.getStatus()) {

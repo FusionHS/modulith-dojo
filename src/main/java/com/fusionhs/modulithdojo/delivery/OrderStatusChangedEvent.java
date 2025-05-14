@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.delivery;
 
-import com.fusionhs.modulithdojo.common.enums.DeliveryStatus;
+import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryStatus;
 import lombok.Value;
 import org.springframework.modulith.events.Externalized;
 

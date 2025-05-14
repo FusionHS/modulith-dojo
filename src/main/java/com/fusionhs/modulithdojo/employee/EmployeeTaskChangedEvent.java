@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.employee;
 
-import com.fusionhs.modulithdojo.common.enums.TaskStatus;
+import com.fusionhs.modulithdojo.common.dto.employee.TaskStatus;
 import lombok.Value;
 import org.springframework.modulith.events.Externalized;
 

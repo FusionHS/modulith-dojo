@@ -1,6 +1,6 @@
 package com.fusionhs.modulithdojo.pizza;
 
-import com.fusionhs.modulithdojo.common.dto.PizzaDto;
+import com.fusionhs.modulithdojo.common.dto.pizza.PizzaDto;
 import com.fusionhs.modulithdojo.pizza.model.Pizza;
 
 import java.util.List;
