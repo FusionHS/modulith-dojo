@@ -35,6 +35,3 @@ logging:
     root: INFO
     com:
       fusionhs: INFO
-    org:
-      hibernate:
-        SQL: DEBUG 
