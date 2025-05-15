@@ -3,7 +3,7 @@ spring:
     name: modulith-dojo
   docker:
     compose:
-      lifecycle-management: start_only
+      lifecycle-management: start-only
   jpa:
     open-in-view: false
     hibernate:
@@ -35,3 +35,7 @@ logging:
     root: INFO
     com:
       fusionhs: INFO
+
+# External service configurations
+pizza-service:
+  url: ${PIZZA_SERVICE_URL:http://localhost:8081}
