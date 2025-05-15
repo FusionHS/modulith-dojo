@@ -18,15 +18,12 @@ public class OpenApiConfig {
                 .description("Development server");
 
         Info info = new Info()
-                .title("Bob's Pizzas Delivery API")
+                .title("Bob's Pizzas Employee API")
                 .version("1.0.0")
                 .description("""
                         API documentation for the Bob's Pizzas Delivery System.
                         This modular monolith demonstrates Spring Modulith architecture with:
-                        - Pizza menu and order management
-                        - Delivery tracking and assignment
                         - Employee task management
-                        - Real-time order statistics
                         """);
 
         return new OpenAPI()

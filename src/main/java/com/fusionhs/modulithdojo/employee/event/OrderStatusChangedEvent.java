@@ -1,4 +1,4 @@
-package com.fusionhs.modulithdojo.delivery;
+package com.fusionhs.modulithdojo.employee.event;
 
 import com.fusionhs.modulithdojo.common.dto.delivery.DeliveryStatus;
 import lombok.Value;

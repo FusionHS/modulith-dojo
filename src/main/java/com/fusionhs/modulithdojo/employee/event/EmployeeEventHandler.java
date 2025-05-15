@@ -1,7 +1,6 @@
 package com.fusionhs.modulithdojo.employee.event;
 
 import com.fusionhs.modulithdojo.common.dto.employee.TaskStatus;
-import com.fusionhs.modulithdojo.delivery.OrderStatusChangedEvent;
 import com.fusionhs.modulithdojo.employee.service.EmployeeInternalApi;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
