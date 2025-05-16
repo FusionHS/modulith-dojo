@@ -26,8 +26,8 @@ A monolithic architecture is the traditional unified model where the entire appl
 <div>
 
 * ### ✅ Advantages
-  - Simple development workflow
   - Easy deployment & testing
+  - Simple CI/CD workflow
   - Strong data consistency
   - Fast communication
   - Lower operational complexity
@@ -87,15 +87,16 @@ Best of both worlds - single deployment unit with clear internal boundaries.
   - Clear module boundaries
   - Simple operations
   - Easier testing
-  - Natural path to microservices
   - Team autonomy within modules
+
+  * Natural path to microservices
 </div>
 
 <div>
 
 * ### ❌ Disadvantages
   - Requires discipline
-  - Careful boundary design
+  - Be careful boundary design
   - Risk of coupling
   - Single-unit scaling
   - Shared deployment
@@ -197,13 +198,23 @@ com.pizza.order          # Module root
 
 # Spring Modulith
 
-## Key Features 
+<div class="columns">
+<div>
+
+## Key Features
 - Module isolation
 - Event-driven communication
 - Application Events
 - Module API contracts
 - Testing support
 - Documentation
+
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+<img src="./assets/spring-modulith.svg" width="60%">
+</div>
+</div>
 
 ---
 
@@ -228,6 +239,8 @@ package com.pizza.order;
 
 ### Violations Example
 ```java
+package com.pizza.order.service;
+
 // ❌ Illegal access to internal package
 import com.pizza.menu.domain.MenuItem;
 
@@ -351,7 +364,7 @@ void on(MonthHasPassed event) {
 
 ---
 
-# Module Communication
+# Module Communication <img src="./assets/module-setup.png" align="right" width="25%">
 
 ## Events
 - `OrderStatusChangedEvent`
